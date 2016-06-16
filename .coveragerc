@@ -1,0 +1,6 @@
+[report]
+include =
+    src/tetrd/*
+omit =
+    */test*
+    */upgrades/*
