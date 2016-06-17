@@ -1,0 +1,22 @@
+.upcoming_recent_events {
+    padding-top: 20px;
+}
+
+.page-header {
+  background: url(http://104.199.136.137:8401/tetrd/resource/images/image.jpg/@@images/image) no-repeat scroll center top;
+}
+
+.page-content {
+    padding: 35px 0;
+}
+
+.date {
+    border:inherit;
+    font-size:inherit;
+    padding:inherit;
+    text-align:inherit;
+    width:auto;
+    -moz-box-shadow:inherit;
+    box-shadow:inherit
+}
+

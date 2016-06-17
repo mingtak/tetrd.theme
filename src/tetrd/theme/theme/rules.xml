@@ -2,12 +2,16 @@
 <rules
   xmlns="http://namespaces.plone.org/diazo"
   xmlns:css="http://namespaces.plone.org/diazo/css"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <xi:include href="++theme++barceloneta/backend.xml" />
 
   <!-- Apply the following rules to standard Plone pages -->
-  <rules css:if-content="#visual-portal-wrapper">
+<!--  <rules css:if-content="#visual-portal-wrapper"> -->
+  <rules css:if-content="body.viewpermission-view, body.viewpermission-none">
 
-    <theme href="index.html" />
+    <theme href="cover.html" />
 
     <!-- Replace title with Plone's page title  -->
     <replace
@@ -42,16 +46,14 @@
 
     <!-- LOGO -->
     <copy
-      attributes="href"
       css:content="#portal-logo"
       css:theme=".navbar-brand"
       />
 
-    <!-- PORTAL NAVIGATION -->
-    <replace
-      css:content-children="#portal-globalnav"
-      css:theme-children="#navbar"
-      />
+    <!-- PORTAL NAVIGATION (section.pt)-->
+    <replace css:content="section.topbar" css:theme="section.topbar"/>
+    <replace css:content="nav.navbar" css:theme="nav.navbar"/>
+
 
     <!-- LOGIN (FOR ANONYMOUS USERS) -->
     <replace
@@ -114,17 +116,38 @@
       css:content="#plone-contentmenu-workflow .arrowDownAlternative"
       />
 
+
+    <!-- Banner without Cover -->
+    <before
+        css:content="section.page-header"
+        css:theme="section#content"
+      />
+
     <!-- CONTENT -->
     <replace
-      css:content="#content"
-      css:theme-children="#content"
+      css:content-children="#content"
+      css:theme-children="section#content"
       />
 
     <!-- FOOTER -->
     <replace
+      css:content="footer.foooter"
+      css:theme="footer"
+      />
+<!--
+    <replace
       css:content="#portal-siteactions"
       css:theme-children="footer"
       />
+-->
+    <!-- Donate box -->
+    <replace
+      css:content="#donate_box"
+      css:theme="#donate_box"
+      />
+
+    <!-- drop -->
+    <drop css:content="#portal-column-two" />
 
   </rules>
 

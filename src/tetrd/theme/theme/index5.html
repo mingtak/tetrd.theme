@@ -16,6 +16,8 @@
     <!--Bootstrap-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <!--Bootstrap Select-->
+    <link rel="stylesheet" href="vendors/bootstrap-select/css/bootstrap-select.min.css">
     <!--Font Awesome-->
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <!--Owl Carousel-->
@@ -34,8 +36,41 @@
     <![endif]-->
 </head>
 <body>
+    
+    <header class="row header1">
+        <div class="container">
+            <div class="logo pull-left">
+                <a href="#"><img src="images/logo.png" alt=""></a>
+            </div>
+            <form action="#" method="post" role="form" class="pull-left language_picker">
+                <select name="language" class="selectpicker">
+                    <option value="en">en</option>
+                    <option value="bn">bn</option>
+                    <option value="ar">ar</option>
+                </select>
+            </form>
+            <a href="#donate_box" class="btn-primary btn-outline hidden-sm hidden-xs pull-right">donate now</a>
+            
+            <div class="pull-right emergency-contact">
+                <div class="pull-left">
+                    <span><i class="fa fa-envelope-o"></i></span>
+                    <div class="infos_col">
+                        <h6>email us at</h6>
+                        <a href="mailto:info@helpinghands.com"><h5>info@helpinghands.com</h5></a>
+                    </div>
+                </div>
+                <div class="pull-left">
+                    <span class="rotate"><i class="fa fa-phone"></i></span>
+                    <div class="infos_col">
+                        <h6>call us now</h6>
+                        <h4>700 (123) 4567</h4>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </header>
    
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav class="navbar navbar-default navbar-static-top navbar2 navbar2-bottom">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false">
@@ -44,11 +79,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><img src="images/logo.png" alt=""></a>
             </div>            
-            <div class="collapse navbar-collapse" id="mainNav">
-                <a href="volunteer.html" class="volunteer-link btn-primary btn-outline hidden-sm hidden-xs pull-right">become volunteer</a>
-                <ul class="nav navbar-nav navbar-right">
+            <div class="collapse navbar-collapse" id="mainNav">                
+                <ul class="nav navbar-nav">
                     <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
                         <ul class="dropdown-menu">
@@ -101,37 +134,40 @@
                         </ul>
                     </li>
                     <li><a href="contact.html">contact</a></li>
-                </ul>                
+                </ul>
+                <form class="navbar-form navbar-right hidden-xs hidden-sm" action="#" method="get" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                </form>
             </div>
         </div>
     </nav>
     
     <!--Featured Slider-->
-    <section class="row featured_events">
+    <section class="row featured_events featured_projects">
         <div class="item">
-            <img src="http://themedesigner.in.dimgx.net/demo/Helping-Hands/images/featured-slider.jpg" alt="">
+            <img src="http://themedesigner.in.dimgx.net/demo/Helping-Hands/images/slide2.jpg" alt="">
             <div class="row caption m0">
                	<div class="caption_row">
 					<div class="container">
-						<div class="event_box featured_event_box row m0">
+						<div class="event_box featured_event_box featured_porduct_box row m0">
 							<div class="event_meta row m0">                            
 								<div class="label label-default pull-left">featured</div>
-								<div class="pull-right days_left">193 days left</div>
+								<div class="pull-left rating">
+									<i class="fa fa-star starred"></i>
+									<i class="fa fa-star starred"></i>
+									<i class="fa fa-star starred"></i>
+									<i class="fa fa-star starred"></i>
+									<i class="fa fa-star"></i>
+								</div>
 							</div>
-							<h4 class="event_link"><a href="single-event.html">GIVE EDUCATION TO THE ONE’S WHO REALLY NEEDED</a></h4>
+							<h4 class="event_link"><a href="single-product.html">BUY US SOME NEW CLOTHES TO DONATE THE CHILDS</a></h4>
 							<p>Phasellus in egestas libero, et congue lacus. Cras vel lacus nisi. Duis nulla metus, tincidunt at tortor.</p>
-							<div class="row fund_raises m0">
-								<div class="pull-left raised amount_box">
-									<h6>raised</h6>
-									<h2>$65,360</h2>
-								</div>
-								<div class="pull-left goal amount_box">
-									<h6>goal</h6>
-									<h2>$124,500</h2>
-								</div>
-							</div>
-							<div class="row m0 text-center">
-								<a href="#donate_box" class="btn-primary">donate now</a>
+							<div class="row m0 btn-group">
+								<div class="btn">$99.99</div>
+								<a href="#" class="btn btn-primary">add to cart</a>
 							</div>
 						</div>
 					</div>
@@ -143,25 +179,22 @@
             <div class="row caption m0">
                	<div class="caption_row">
 					<div class="container">
-						<div class="event_box featured_event_box row m0">
+						<div class="event_box featured_event_box featured_porduct_box row m0">
 							<div class="event_meta row m0">                            
 								<div class="label label-default pull-left">featured</div>
-								<div class="pull-right days_left">193 days left</div>
+								<div class="pull-left rating">
+									<i class="fa fa-star starred"></i>
+									<i class="fa fa-star starred"></i>
+									<i class="fa fa-star starred"></i>
+									<i class="fa fa-star starred"></i>
+									<i class="fa fa-star"></i>
+								</div>
 							</div>
-							<h4 class="event_link"><a href="single-event.html">GIVE EDUCATION TO THE ONE’S WHO REALLY NEEDED</a></h4>
+							<h4 class="event_link"><a href="single-product.html">BUY US SOME NEW CLOTHES TO DONATE THE CHILDS</a></h4>
 							<p>Phasellus in egestas libero, et congue lacus. Cras vel lacus nisi. Duis nulla metus, tincidunt at tortor.</p>
-							<div class="row fund_raises m0">
-								<div class="pull-left raised amount_box">
-									<h6>raised</h6>
-									<h2>$65,360</h2>
-								</div>
-								<div class="pull-left goal amount_box">
-									<h6>goal</h6>
-									<h2>$124,500</h2>
-								</div>
-							</div>
-							<div class="row m0 text-center">
-								<a href="#donate_box" class="btn-primary">donate now</a>
+							<div class="row m0 btn-group">
+								<div class="btn">$99.99</div>
+								<a href="#" class="btn btn-primary">add to cart</a>
 							</div>
 						</div>
 					</div>
@@ -173,340 +206,26 @@
             <div class="row caption m0">
                	<div class="caption_row">
 					<div class="container">
-						<div class="event_box featured_event_box row m0">
+						<div class="event_box featured_event_box featured_porduct_box row m0">
 							<div class="event_meta row m0">                            
 								<div class="label label-default pull-left">featured</div>
-								<div class="pull-right days_left">193 days left</div>
+								<div class="pull-left rating">
+									<i class="fa fa-star starred"></i>
+									<i class="fa fa-star starred"></i>
+									<i class="fa fa-star starred"></i>
+									<i class="fa fa-star starred"></i>
+									<i class="fa fa-star"></i>
+								</div>
 							</div>
-							<h4 class="event_link"><a href="single-event.html">GIVE EDUCATION TO THE ONE’S WHO REALLY NEEDED</a></h4>
+							<h4 class="event_link"><a href="single-product.html">BUY US SOME NEW CLOTHES TO DONATE THE CHILDS</a></h4>
 							<p>Phasellus in egestas libero, et congue lacus. Cras vel lacus nisi. Duis nulla metus, tincidunt at tortor.</p>
-							<div class="row fund_raises m0">
-								<div class="pull-left raised amount_box">
-									<h6>raised</h6>
-									<h2>$65,360</h2>
-								</div>
-								<div class="pull-left goal amount_box">
-									<h6>goal</h6>
-									<h2>$124,500</h2>
-								</div>
-							</div>
-							<div class="row m0 text-center">
-								<a href="#donate_box" class="btn-primary">donate now</a>
+							<div class="row m0 btn-group">
+								<div class="btn">$99.99</div>
+								<a href="#" class="btn btn-primary">add to cart</a>
 							</div>
 						</div>
 					</div>
 				</div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="how_help row sectionGap">
-        <div class="container">
-            <div class="row sectionTitle text-center">
-                <h6 class="label label-default">how you could help</h6>
-                <h3>WE HELP THOUSANDS OF CHILDRENS TO GET THEIR EDUCATION NOW WE NEED YOUR HELP TO CONTINUE THIS</h3>
-            </div>
-            <div class="row help-process_row">
-                <div class="col-sm-4 help-process">
-                    <div class="icon_box row m0">
-                        <img src="images/help01.png" alt="">
-                    </div>
-                    <h5>GIVE DONATION</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipis purus efficitur eget. Morbi sagittis mi eros porttitor auctor dui, in bibendum.</p>
-                </div>
-                <div class="col-sm-4 help-process">
-                    <div class="icon_box row m0">
-                        <img src="images/help02.png" alt="">
-                    </div>
-                    <h5>BECOME VOLUNTEER</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipis purus efficitur eget. Morbi sagittis mi eros porttitor auctor dui, in bibendum.</p>
-                </div>
-                <div class="col-sm-4 help-process">
-                    <div class="icon_box row m0">
-                        <img src="images/help03.png" alt="">
-                    </div>
-                    <h5>GIVE SCHOLARSHIP</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipis purus efficitur eget. Morbi sagittis mi eros porttitor auctor dui, in bibendum.</p>
-                </div>
-            </div>
-            <div class="row m0 buttons">
-                <a href="#donate_box" class="btn-primary">donate now</a>
-                <a href="volunteer.html" class="btn-primary btn-outline">BECOME VOLUNTEER</a>
-            </div>
-        </div>
-    </section>
-    
-    <!--Our Casuses-->
-    <section class="row our_casuses">
-        <div class="container">
-            <div class="row sectionTitle text-center">
-                <h6 class="label label-default">our causes</h6>
-                <h3>CHECK THE ACTIVE CAUSES AND HELP US</h3>
-            </div>
-            <div class="row">
-                <div class="causes_carousel">
-                    <div class="item">
-                        <div class="images_row row m0">
-                            <div id="causes_carousel_inner" class="carousel slide" data-ride="carousel" data-interval="3000">
-                                <!-- Wrapper for slides -->
-                                <div class="carousel-inner" role="listbox">
-                                    <div class="item active"><img src="http://themedesigner.in.dimgx.net/demo/Helping-Hands/images/cause01.jpg" alt=""></div>
-                                    <div class="item"><img src="http://themedesigner.in.dimgx.net/demo/Helping-Hands/images/cause02.jpg" alt=""></div>
-                                </div>
-
-                                <!-- Indicators -->
-                                <ol class="carousel-indicators">
-                                    <li data-target="#causes_carousel_inner" data-slide-to="0" class="active"></li>
-                                    <li data-target="#causes_carousel_inner" data-slide-to="1"></li>
-                                </ol>
-                            </div>
-                            <a href="#donate_box" class="btn-primary">donate now</a>
-                        </div>
-                        <div class="cause_excepts row m0">
-                            <h4 class="cuase_title"><a href="single-cause.html">GIVE EDUCATION TO CHILDRENS</a></h4>
-                            <p>Phasellus in egestas libero, et congue lacus. Cras vel lacus nisi. Duis nulla metus, tincidunt at tortor.</p>
-                            <div class="row fund_progress m0">
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100">
-                                        <div class="percentage"><span class="counter">68</span>%</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row fund_raises m0">                                
-                                <div class="pull-left raised amount_box">
-                                    <h6>raised</h6>
-                                    <h3>$65,360</h3>
-                                </div>
-                                <div class="pull-left goal amount_box">
-                                    <h6>goal</h6>
-                                    <h3>$124,500</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="images_row row m0">
-                            <img src="http://themedesigner.in.dimgx.net/demo/Helping-Hands/images/cause02.jpg" alt="">
-                            <a href="#donate_box" class="btn-primary">donate now</a>
-                        </div>
-                        <div class="cause_excepts row m0">
-                            <h4 class="cuase_title"><a href="single-cause.html">HELP SENIOR CITIZENS</a></h4>
-                            <p>Phasellus in egestas libero, et congue lacus. Cras vel lacus nisi. Duis nulla metus, tincidunt at tortor.</p>
-                            <div class="row fund_progress m0">
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100">
-                                        <div class="percentage"><span class="counter">68</span>%</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row fund_raises m0">                                
-                                <div class="pull-left raised amount_box">
-                                    <h6>raised</h6>
-                                    <h3>$65,360</h3>
-                                </div>
-                                <div class="pull-left goal amount_box">
-                                    <h6>goal</h6>
-                                    <h3>$124,500</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="images_row row m0">
-                            <img src="http://themedesigner.in.dimgx.net/demo/Helping-Hands/images/cause03.jpg" alt="">
-                            <a href="#donate_box" class="btn-primary">donate now</a>
-                        </div>
-                        <div class="cause_excepts row m0">
-                            <h4 class="cuase_title"><a href="single-cause.html">HELP US PRINTING 100 T-SHIRTS</a></h4>
-                            <p>Phasellus in egestas libero, et congue lacus. Cras vel lacus nisi. Duis nulla metus, tincidunt at tortor.</p>
-                            <div class="row fund_progress m0">
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100">
-                                        <div class="percentage"><span class="counter">68</span>%</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row fund_raises m0">                                
-                                <div class="pull-left raised amount_box">
-                                    <h6>raised</h6>
-                                    <h3>$65,360</h3>
-                                </div>
-                                <div class="pull-left goal amount_box">
-                                    <h6>goal</h6>
-                                    <h3>$124,500</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="images_row row m0">
-                            <img src="http://themedesigner.in.dimgx.net/demo/Helping-Hands/images/cause02.jpg" alt="">
-                            <a href="#donate_box" class="btn-primary">donate now</a>
-                        </div>
-                        <div class="cause_excepts row m0">
-                            <h4 class="cuase_title"><a href="single-cause.html">HELP SENIOR CITIZENS</a></h4>
-                            <p>Phasellus in egestas libero, et congue lacus. Cras vel lacus nisi. Duis nulla metus, tincidunt at tortor.</p>
-                            <div class="row fund_progress m0">
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100">
-                                        <div class="percentage"><span class="counter">68</span>%</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row fund_raises m0">                                
-                                <div class="pull-left raised amount_box">
-                                    <h6>raised</h6>
-                                    <h3>$65,360</h3>
-                                </div>
-                                <div class="pull-left goal amount_box">
-                                    <h6>goal</h6>
-                                    <h3>$124,500</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="images_row row m0">
-                            <img src="http://themedesigner.in.dimgx.net/demo/Helping-Hands/images/cause03.jpg" alt="">
-                            <a href="#donate_box" class="btn-primary">donate now</a>
-                        </div>
-                        <div class="cause_excepts row m0">
-                            <h4 class="cuase_title"><a href="single-cause.html">HELP US PRINTING 100 T-SHIRTS</a></h4>
-                            <p>Phasellus in egestas libero, et congue lacus. Cras vel lacus nisi. Duis nulla metus, tincidunt at tortor.</p>
-                            <div class="row fund_progress m0">
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100">
-                                        <div class="percentage"><span class="counter">68</span>%</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row fund_raises m0">                                
-                                <div class="pull-left raised amount_box">
-                                    <h6>raised</h6>
-                                    <h3>$65,360</h3>
-                                </div>
-                                <div class="pull-left goal amount_box">
-                                    <h6>goal</h6>
-                                    <h3>$124,500</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="images_row row m0">
-                            <img src="http://themedesigner.in.dimgx.net/demo/Helping-Hands/images/cause02.jpg" alt="">
-                            <a href="#donate_box" class="btn-primary">donate now</a>
-                        </div>
-                        <div class="cause_excepts row m0">
-                            <h4 class="cuase_title"><a href="single-cause.html">HELP SENIOR CITIZENS</a></h4>
-                            <p>Phasellus in egestas libero, et congue lacus. Cras vel lacus nisi. Duis nulla metus, tincidunt at tortor.</p>
-                            <div class="row fund_progress m0">
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100">
-                                        <div class="percentage"><span class="counter">68</span>%</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row fund_raises m0">                                
-                                <div class="pull-left raised amount_box">
-                                    <h6>raised</h6>
-                                    <h3>$65,360</h3>
-                                </div>
-                                <div class="pull-left goal amount_box">
-                                    <h6>goal</h6>
-                                    <h3>$124,500</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="images_row row m0">
-                            <img src="http://themedesigner.in.dimgx.net/demo/Helping-Hands/images/cause03.jpg" alt="">
-                            <a href="#donate_box" class="btn-primary">donate now</a>
-                        </div>
-                        <div class="cause_excepts row m0">
-                            <h4 class="cuase_title"><a href="single-cause.html">HELP US PRINTING 100 T-SHIRTS</a></h4>
-                            <p>Phasellus in egestas libero, et congue lacus. Cras vel lacus nisi. Duis nulla metus, tincidunt at tortor.</p>
-                            <div class="row fund_progress m0">
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100">
-                                        <div class="percentage"><span class="counter">68</span>%</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row fund_raises m0">                                
-                                <div class="pull-left raised amount_box">
-                                    <h6>raised</h6>
-                                    <h3>$65,360</h3>
-                                </div>
-                                <div class="pull-left goal amount_box">
-                                    <h6>goal</h6>
-                                    <h3>$124,500</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="row upcoming_recent_events">
-        <div class="container">
-            <div class="row sectionTitle text-center">
-                <h6 class="label label-default">EvENTS OF HELPING HANDS</h6>
-                <h3>UPCOMING &amp; RECENT EVENTS AT HELPING HANDS</h3>
-            </div>
-            <div class="row">
-                <div class="col-sm-12 col-md-6 upcoming_events">
-                    <div class="row event_cover_photo">
-                        <img src="http://themedesigner.in.dimgx.net/demo/Helping-Hands/images/upcoming01.jpg" alt="" class="img-responsive">
-                        <div class="upcoming_label label">upcoming event</div>
-                        <h6 class="event_time_loc">
-                            <span class="by">JOHN DOE</span>
-                            <span class="date_time">TUESDAY, JUNE 6, 2015 AT 1:30 PM</span>
-                            <span class="loc">NEW YORK, NY</span>
-                        </h6>
-                    </div>
-                    <h4 class="event_title"><a href="single-event.html">EVENT FOR HOW TO BECOME GOOD VOLUNTEER</a></h4>
-                    <p class="event_summery">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam malesuada dapibus diam, ut fringilla purus efficitur eget. Morbi sagittis mi ac eros semper pharetra. Praesent sed purus purus.</p>
-                </div>
-                <div class="col-sm-6 col-md-3 upcoming_events">
-                    <div class="row event_cover_photo">
-                        <img src="http://themedesigner.in.dimgx.net/demo/Helping-Hands/images/upcoming02.jpg" alt="" class="img-responsive">
-                        <h6 class="event_time_loc">
-                            <span class="date_time">JUNE 6, 2015 AT NEW YORK</span>
-                        </h6>
-                    </div>
-                    <h5 class="event_title"><a href="single-event.html">SEMINAR FOR Childrens to know about FUTURE</a></h5>
-                </div>
-                <div class="col-sm-6 col-md-3 upcoming_events">
-                    <div class="row event_cover_photo">
-                        <img src="http://themedesigner.in.dimgx.net/demo/Helping-Hands/images/upcoming03.jpg" alt="" class="img-responsive">
-                        <h6 class="event_time_loc">
-                            <span class="date_time">JUNE 6, 2015 AT NEW YORK</span>
-                        </h6>
-                    </div>
-                    <h5 class="event_title"><a href="single-event.html">EVENT FOR GATHERING BOOKS FOR CHILDRENS</a></h5>
-                </div>
-                <div class="col-sm-6 col-md-3 upcoming_events">
-                    <div class="row event_cover_photo">
-                        <img src="http://themedesigner.in.dimgx.net/demo/Helping-Hands/images/upcoming04.jpg" alt="" class="img-responsive">
-                        <h6 class="event_time_loc">
-                            <span class="date_time">JUNE 6, 2015 AT NEW YORK</span>
-                        </h6>
-                    </div>
-                    <h5 class="event_title"><a href="single-event.html">EVENT FOR PROVIDING PENS TO THE CHILDRENS</a></h5>
-                </div>
-                <div class="col-sm-6 col-md-3 upcoming_events">
-                    <div class="row event_cover_photo">
-                        <img src="http://themedesigner.in.dimgx.net/demo/Helping-Hands/images/upcoming05.jpg" alt="" class="img-responsive">
-                        <h6 class="event_time_loc">
-                            <span class="date_time">JUNE 6, 2015 AT NEW YORK</span>
-                        </h6>
-                    </div>
-                    <h5 class="event_title"><a href="single-event.html">MEDICAL CHECKUP CAMP FOR CHILDRENS IN AFRICA</a></h5>
-                </div>
             </div>
         </div>
     </section>
@@ -796,126 +515,153 @@
         </div>
     </section>
     
-    <section class="row quotes_row">
+    <section class="row events_news">
         <div class="container">
-            <div class="row sectionTitle text-center">
-                <h6 class="label label-default">EvENTS OF HELPING HANDS</h6>
-                <h3>UPCOMING &amp; RECENT EVENTS AT HELPING HANDS</h3>
-            </div>
             <div class="row">
-                <div class="col-sm-4 quotation_block text-center">
-                    <div class="quote_block row">
-                        <span class="quote_sign">“</span>
-                        <p>Lorem ipsum dolor sit amet, consectet adipiscing elit. Nam malesuada dapi bus diam, ut fringilla purus efficitur eget. Morbi sagittis mi ac eros semper pharetra. Praesent sed.</p>
+                <div class="col-md-4 our_events_as_sidebar">
+                    <div class="row m0 inner">
+                        <div class="row m0 upcoming_events style2">
+                            <div class="row event_cover_photo">
+                                <img src="http://themedesigner.in.dimgx.net/demo/Helping-Hands/images/upcoming02.jpg" alt="" class="img-responsive">
+                                <h6 class="event_time_loc">
+                                    <span class="date_time">JUNE 6, 2015 AT NEW YORK</span>
+                                </h6>
+                            </div>
+                            <h5 class="event_title"><a href="single-event.html">EVENT FOR GATHERING BOOKS FOR THE CHILDRENS</a></h5>
+                            <p class="event_summery">Lorem ipsum dolor sit amet, conse dapibus diam, ut fringilla purus semper pharetra. Praesent.</p>
+                            <a href="single-event.html" class="btn-primary btn-outline">read more</a>
+                        </div>
+                        <div class="row m0 upcoming_events style2">
+                            <div class="row event_cover_photo">
+                                <img src="http://themedesigner.in.dimgx.net/demo/Helping-Hands/images/upcoming03.jpg" alt="" class="img-responsive">
+                                <h6 class="event_time_loc">
+                                    <span class="date_time">JUNE 6, 2015 AT NEW YORK</span>
+                                </h6>
+                            </div>
+                            <h5 class="event_title"><a href="single-event.html">MEDICAL CHECKUP CAMP FOR CHILDRENS IN AFRICA</a></h5>
+                            <p class="event_summery">Lorem ipsum dolor sit amet, conse dapibus diam, ut fringilla purus semper pharetra. Praesent.</p>
+                            <a href="single-event.html" class="btn-primary btn-outline">read more</a>
+                        </div>
+                        <div class="row m0 upcoming_events style2">
+                            <div class="row event_cover_photo">
+                                <img src="http://themedesigner.in.dimgx.net/demo/Helping-Hands/images/upcoming04.jpg" alt="" class="img-responsive">
+                                <h6 class="event_time_loc">
+                                    <span class="date_time">JUNE 6, 2015 AT NEW YORK</span>
+                                </h6>
+                            </div>
+                            <h5 class="event_title"><a href="single-event.html">SEMINAR FOR Childrens to know about FUTURE</a></h5>
+                            <p class="event_summery">Lorem ipsum dolor sit amet, conse dapibus diam, ut fringilla purus semper pharetra. Praesent.</p>
+                            <a href="single-event.html" class="btn-primary btn-outline">read more</a>
+                        </div>
                     </div>
-                    <h5>Andy Dufresne</h5>
-                    <h6>Appstore</h6>
                 </div>
-                <div class="col-sm-4 quotation_block text-center">
-                    <div class="quote_block row">
-                        <span class="quote_sign">“</span>
-                        <p>Lorem ipsum dolor sit amet, consectet adipiscing elit. Nam malesuada dapi bus diam, ut fringilla purus efficitur eget. Morbi sagittis mi ac eros semper pharetra. Praesent sed.</p>
+                <div class="col-md-8 latest_news_col">
+                    <div class="latest-post media">
+                        <div class="media-body">
+                            <h4 class="post-title"><a href="single.html">EVENT FOR PROVIDING PENS TO THE CHILDRENS</a></h4>
+                            <h6 class="post-meta">
+                                <a href="#">JOHN DOE</a>
+                                <a href="#">06 June 2015</a>
+                                <a href="#" class="tag-name">BUSINESS</a>,
+                                <a href="#" class="tag-name">CAUSE</a>
+                            </h6>
+                            <div class="post-excerpts row m0">Phasellus in egestas libero, et cong lacus. Cras vel lacus nisi. Duis null metus, tincidunt at tortor.</div>
+                            <a href="single.html" class="btn-primary btn-outline">know more</a>
+                        </div>
+                        <div class="media-right featured_cont">
+                            <a href="single.html"><img src="http://themedesigner.in.dimgx.net/demo/Helping-Hands/images/posts/1.jpg" alt="" class="img-responsive">
+                            <i class="fa fa-youtube-play"></i></a>
+                        </div>
                     </div>
-                    <h5>John Doe</h5>
-                    <h6>Company Name</h6>
-                </div>
-                <div class="col-sm-4 quotation_block text-center">
-                    <div class="quote_block row">
-                        <span class="quote_sign">“</span>
-                        <p>Lorem ipsum dolor sit amet, consectet adipiscing elit. Nam malesuada dapi bus diam, ut fringilla purus efficitur eget. Morbi sagittis mi ac eros semper pharetra. Praesent sed.</p>
+                    <div class="latest-post media">
+                        <div class="media-body">
+                            <h4 class="post-title"><a href="#">MEDICAL CHECKUP CAMP FOR CHILDRENS IN SOUTH AFRICA AREA</a></h4>
+                            <h6 class="post-meta">
+                                <a href="#">JOHN DOE</a>
+                                <a href="#">06 June 2015</a>
+                                <a href="#" class="tag-name">BUSINESS</a>,
+                                <a href="#" class="tag-name">CAUSE</a>
+                            </h6>
+                            <div class="post-excerpts row m0">Phasellus in egestas libero, et cong lacus. Cras vel lacus nisi. Duis null metus, tincidunt at tortor.</div>
+                            <a href="single.html" class="btn-primary btn-outline">know more</a>
+                        </div>
+                        <div class="media-right featured_cont">
+                            <a href="#"><img src="http://themedesigner.in.dimgx.net/demo/Helping-Hands/images/posts/2.jpg" alt="" class="img-responsive"></a>
+                        </div>
                     </div>
-                    <h5>James Flintoff</h5>
-                    <h6>Designer</h6>
+                    <div class="latest-post media">
+                        <div class="media-body">
+                            <h4 class="post-title"><a href="#">EVENT FOR GATHERING BOOKS FOR CHILDRENS IN EASTERN EUROPE</a></h4>
+                            <h6 class="post-meta">
+                                <a href="#">JOHN DOE</a>
+                                <a href="#">06 June 2015</a>
+                                <a href="#" class="tag-name">BUSINESS</a>,
+                                <a href="#" class="tag-name">CAUSE</a>
+                            </h6>
+                            <div class="post-excerpts row m0">Phasellus in egestas libero, et cong lacus. Cras vel lacus nisi. Duis null metus, tincidunt at tortor.</div>
+                            <a href="single.html" class="btn-primary btn-outline">know more</a>
+                        </div>
+                        <div class="media-right featured_cont">
+                            <a href="single.html"><img src="http://themedesigner.in.dimgx.net/demo/Helping-Hands/images/posts/3.jpg" alt="" class="img-responsive"></a>
+                        </div>                        
+                    </div>
+                    <div class="latest-post media">
+                        <div class="media-body">
+                            <h4 class="post-title"><a href="#">SEMINAR FOR Childrens to know FUTURE AND LATEST TRENDS</a></h4>
+                            <h6 class="post-meta">
+                                <a href="#">JOHN DOE</a>
+                                <a href="#">06 June 2015</a>
+                                <a href="#" class="tag-name">BUSINESS</a>,
+                                <a href="#" class="tag-name">CAUSE</a>
+                            </h6>
+                            <div class="post-excerpts row m0">Phasellus in egestas libero, et cong lacus. Cras vel lacus nisi. Duis null metus, tincidunt at tortor.</div>
+                            <a href="single.html" class="btn-primary btn-outline">know more</a>
+                        </div>
+                        <div class="media-right featured_cont">
+                            <a href="single.html"><img src="http://themedesigner.in.dimgx.net/demo/Helping-Hands/images/posts/4.jpg" alt="" class="img-responsive"></a>
+                        </div>                        
+                    </div>
+                    <div class="latest-post media">
+                        <div class="media-body">
+                            <h4 class="post-title"><a href="#">MEDICAL CHECKUP CAMP FOR CHILDRENS IN AFRICA</a></h4>
+                            <h6 class="post-meta">
+                                <a href="#">JOHN DOE</a>
+                                <a href="#">06 June 2015</a>
+                                <a href="#" class="tag-name">BUSINESS</a>,
+                                <a href="#" class="tag-name">CAUSE</a>
+                            </h6>
+                            <div class="post-excerpts row m0">Phasellus in egestas libero, et cong lacus. Cras vel lacus nisi. Duis null metus, tincidunt at tortor. Phasellus Duis null metus, tincidunt at tortor. in egestas libero, et cong lacus. Cras vel lacus nisi. Phasellus in egestas libero, et cong lacus. Cras vel lacus nisi. Duis null metus, tincidunt at tortor.</div>
+                            <a href="single.html" class="btn-primary btn-outline">know more</a>
+                        </div>                      
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     
-    <section class="row beVolunteer text-center">
+    <section class="row beVolunteer text-center sponsor_variation">
         <div class="container beVolunteerBox">
             <div class="row sectionTitle text-center">
-                <h6 class="label label-default">for good</h6>
-                <h3>become volunteer</h3>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisc elit. Nam malesuada dapibus diam, ut fringilla purus efficitur eget imspurings.</p>
-            <a href="#" class="btn-primary">join us now</a>
-        </div>
-    </section>
-    
-    <section class="row latest_news">
-        <div class="container">
-            <div class="row sectionTitle text-center">
-                <h6 class="label label-default">NEWS OF HELPING HANDS</h6>
-                <h3>LATEST NEWS AT HELPING HANDS</h3>
-            </div>
-            <div class="row">
-                <div class="latest-post col-md-3 col-sm-6">                    
-                    <div class="row m0 featured_cont">
-                        <img src="http://themedesigner.in.dimgx.net/demo/Helping-Hands/images/posts/1.jpg" alt="" class="img-responsive">
-                        <i class="fa fa-youtube-play"></i>
-                    </div>
-                    <h5 class="post-title"><a href="#">EVENT FOR PROVIDING PENS TO THE CHILDRENS</a></h5>
-                    <h6 class="post-meta"><a href="#">JOHN DOE</a><a href="#">06 June 2015</a></h6>
-                    <div class="post-excerpts row m0">Phasellus in egestas libero, et cong lacus. Cras vel lacus nisi. Duis null metus, tincidunt at tortor.</div>
-                    <a href="single.html" class="btn-primary btn-outline">read more</a>
-                </div>
-                <div class="latest-post col-md-3 col-sm-6">                    
-                    <div class="row m0 featured_cont">
-                        <img src="http://themedesigner.in.dimgx.net/demo/Helping-Hands/images/posts/2.jpg" alt="" class="img-responsive">
-                    </div>
-                    <h5 class="post-title"><a href="#">EVENT FOR PROVIDING PENS TO THE CHILDRENS</a></h5>
-                    <h6 class="post-meta"><a href="#">JOHN DOE</a><a href="#">06 June 2015</a></h6>
-                    <div class="post-excerpts row m0">Phasellus in egestas libero, et cong lacus. Cras vel lacus nisi. Duis null metus, tincidunt at tortor.</div>
-                    <a href="single.html" class="btn-primary btn-outline">read more</a>
-                </div>
-                <div class="latest-post col-md-3 col-sm-6">                    
-                    <div class="row m0 featured_cont">
-                        <img src="http://themedesigner.in.dimgx.net/demo/Helping-Hands/images/posts/3.jpg" alt="" class="img-responsive">
-                    </div>
-                    <h5 class="post-title"><a href="#">EVENT FOR PROVIDING PENS TO THE CHILDRENS</a></h5>
-                    <h6 class="post-meta"><a href="#">JOHN DOE</a><a href="#">06 June 2015</a></h6>
-                    <div class="post-excerpts row m0">Phasellus in egestas libero, et cong lacus. Cras vel lacus nisi. Duis null metus, tincidunt at tortor.</div>
-                    <a href="single.html" class="btn-primary btn-outline">read more</a>
-                </div>
-                <div class="latest-post col-md-3 col-sm-6">                    
-                    <div class="row m0 featured_cont">
-                        <img src="http://themedesigner.in.dimgx.net/demo/Helping-Hands/images/posts/4.jpg" alt="" class="img-responsive">
-                    </div>
-                    <h5 class="post-title"><a href="#">EVENT FOR PROVIDING PENS TO THE CHILDRENS</a></h5>
-                    <h6 class="post-meta"><a href="#">JOHN DOE</a><a href="#">06 June 2015</a></h6>
-                    <div class="post-excerpts row m0">Phasellus in egestas libero, et cong lacus. Cras vel lacus nisi. Duis null metus, tincidunt at tortor.</div>
-                    <a href="single.html" class="btn-primary btn-outline">read more</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="row sponsor_banner text-center">
-        <div class="container">
-            <div class="row sectionTitle">
                 <h6 class="label label-default">sponsor this project</h6>
-                <h3>HELP THOUSANDS OF HOMELESS CHILDS TO BUILD GOOD HOUSES</h3>
+                <h3>HELP THOUSANDS OF CHILDs TO COMPLETE EDUCATION</h3>
             </div>
-            <p>Praesent diam massa, interdum quis ex id, laoreet interdum odio. Aenean vel ligula tortor. Phasellus gravida posuere orci, sed elementum orci faucibus eu. Mauris fringilla placerat nisl. Praesent accumsan et fermentum hendrerit. In hac habitasse.</p>
-            <div class="row">
-                <a href="#" class="btn-primary white">sponsor now</a>
-                <a href="#" class="btn-primary btn-outline white">other projects</a>
-            </div>
+            <p>Praesent diam massa, interdum quis ex id, laoreet vel ligula tortor. Phasellus gravida posuere orci, faucibus eu. Mauris fringilla placerat nisl.</p>
+            <a href="#" class="btn-primary">sponsor now</a>
         </div>
     </section>
     
-    <section class="row newsletter_signup">
+    <section class="row beVolunteer2">
         <div class="container">
             <div class="row">
-                <div class="col-sm-5">
-                    <h4>NEWSLETTER SIGN-UP</h4>
-                    <p>Praesent diam massa, interdum quis ex id, laoreet interdum odio.</p>
+                <div class="col-sm-3">
+                    <h3>BECOME VOLUNTEER</h3>
                 </div>
-                <form class="col-sm-7 form-inline newsletter_signup_form">
-                    <input type="text" class="form-control" placeholder="Name">
-                    <input type="email" class="form-control" placeholder="Email Address">
-                    <input type="submit" value="submit" class="btn-primary white">
-                </form>
+                <div class="col-sm-7">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscelit. Nam malesuada dapibus diam, ut fringilla purus efficitur eget imspurings.</p>
+                </div>
+                <div class="col-sm-2 text-right">
+                    <a href="#" class="btn-primary">join now</a>
+                </div>
             </div>
         </div>
     </section>
@@ -1014,6 +760,8 @@
     
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <!--Bootstrap Select-->
+    <script src="vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
     <!--Magnific Popup-->
     <script src="vendors/magnific-popup/jquery.magnific-popup.min.js"></script>
     <!--Owl Carousel-->
