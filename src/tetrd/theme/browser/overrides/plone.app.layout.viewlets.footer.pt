@@ -1,0 +1,54 @@
+<?python
+from plone import api
+
+portal = api.portal.get()
+regStr = 'tetrd.addon.browser.siteSetting.ISiteSetting.'
+contactEmail = api.portal.get_registry_record('%scontactEmail' % regStr)
+contactPhone = api.portal.get_registry_record('%scontactPhone' % regStr)
+footerInfo = api.portal.get_registry_record('%sfooterInfo' % regStr)
+?>
+
+  
+    <footer class="row foooter footer2">
+<!--        <div class="container">
+            <div class="row footer_sidebar">
+                <div class="widget widget-about col-sm-6 col-md-3">
+                    <h5 class="widget-title">about helping hands</h5>
+                    <p>Praesent diam massa, interdum qu vel ligula tortor. Phasellus gravida faucibus eu. Mauris fringilla place et fermentum hendrerit.</p>
+                    <a href="about.html" class="btn-primary btn-outline white">know more</a>
+                </div>
+                <div class="widget widget-recent-posts col-sm-6 col-md-3">
+                    <h5 class="widget-title">recent posts</h5>
+                    <ul class="nav recent-posts">
+                        <li><a href="single.html">EVENT FOR PROVIDING PENS TO THE THE CHILDRENS</a></li>
+                        <li><a href="single.html">MEDICAL CHECKUP CAMP FOR USE CHILDRENS IN AFRICA</a></li>
+                        <li><a href="single.html">SEMINAR FOR Childrens to WELL know about FUTURE</a></li>
+                    </ul>
+                </div>
+                <div class="widget widget-recent-tweets col-sm-6 col-md-3">
+                    <h5 class="widget-title">recent tweets</h5>
+                    <div class="tweet m0">
+                        <p><a href="#">@Ymodita</a>  hey, please send me a msg through the contact form on my profile page at themeforest <br>
+                        <span class="time_past">2 months ago</span></p>
+                    </div>
+                    <a href="#" class="btn-primary btn-outline white">follow us now</a>
+                </div>
+                <div class="widget widget-contact col-sm-6 col-md-3">
+                    <h5 class="widget-title">CONTACT HELPING HANDS</h5>
+                    <address>
+                        Address will be appear here, some details of text will be here.
+                        <br><br>
+                        <span>Phone</span> : +215 (123) 4567 <br>
+                        <span>Email</span> : <a href="mailto:info@helpinghands.com">info@helpinghands.com</a>
+                    </address>
+                </div>
+            </div>
+        </div>            
+-->
+        <div class="row copyright_area m0">
+            <div class="container">
+                <div class="copy_inner row" tal:replace="structure footerInfo">
+                </div>
+            </div>
+        </div>
+    </footer>

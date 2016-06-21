@@ -1,0 +1,86 @@
+<tal:sections
+     xmlns:tal="http://xml.zope.org/namespaces/tal"
+     xmlns:metal="http://xml.zope.org/namespaces/metal"
+     xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+     tal:define="portal_tabs view/portal_tabs"
+     tal:condition="portal_tabs"
+     i18n:domain="plone">
+
+<?python
+from plone import api
+
+portal = api.portal.get()
+regStr = 'tetrd.addon.browser.siteSetting.ISiteSetting.'
+welcomeWords = api.portal.get_registry_record('%swelcomeWords' % regStr)
+contactEmail = api.portal.get_registry_record('%scontactEmail' % regStr)
+contactPhone = api.portal.get_registry_record('%scontactPhone' % regStr)
+donateInfo = api.portal.get_registry_record('%sdonateInfo' % regStr)
+?>
+
+
+    <section class="topbar row" i18n:domain="tetrd.addon">
+        <div class="container">
+            <div class="pull-left welcome-notice" tal:content="welcomeWords">welcome to helping hands</div>
+            <ul class="nav navbar-nav pull-right">
+                <li><a tal:attributes="href string:mailto:${contactEmail}">
+                      <i class="fa fa-envelope-o"></i><span tal:replace="contactEmail"/></a>
+                </li>
+                <li><a href="#"><i class="fa fa-phone"></i><span tal:replace="contactPhone"/></a></li>
+            </ul>
+        </div>
+    </section>
+    
+    <nav class="navbar navbar-default navbar-static-top navbar3">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                  <img tal:attributes="src string:${portal/absolute_url}/logo.png; alt portal/title; title portal/title">
+                </a>
+            </div>            
+            <div class="collapse navbar-collapse" id="mainNav">
+                <a href="#donate_box" class="btn-primary btn-outline hidden-sm hidden-xs pull-right" i18n:translate="">捐款贊助</a>
+
+        <ul class="plone-nav plone-navbar-nav nav navbar-nav navbar-right"
+            id="portal-globalnav"
+            tal:define="selected_tab python:view.selected_portal_tab">
+            <tal:tabs tal:repeat="tab portal_tabs">
+              <li tal:define="tid tab/id"
+                  tal:attributes="id string:portaltab-${tid};
+                                  class python:selected_tab==tid and 'active selected' or nothing">
+                  <a tal:content="tab/name"
+                     tal:attributes="href tab/url;
+                                     title tab/description|nothing;
+                                     target tab/link_target|nothing;">
+                    Tab Name
+                  </a>
+              </li>
+            </tal:tabs>
+        </ul>
+
+
+
+
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+    <!--Donate Form-->
+
+    <div id="donate_box" class="row m0 donate_form mfp-hide" tal:content="structure donateInfo">
+    </div>
+
+
+
+
+
+</tal:sections>

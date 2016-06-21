@@ -1,0 +1,73 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+    xmlns:tal="http://xml.zope.org/namespaces/tal"
+    xmlns:metal="http://xml.zope.org/namespaces/metal"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    lang="en"
+    metal:use-macro="context/main_template/macros/master"
+    i18n:domain="tetrd.addon">
+<body>
+
+
+<metal:content-core fill-slot="content-core">
+<metal:content-core define-macro="content-core"
+                    tal:define="toc context/table_of_contents|nothing;">
+
+
+    <!--Good Causes Cover, Slider-->
+    <section id="good_cause" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li tal:repeat="hero context/heros"
+                tal:attributes="data-slide-to repeat/hero/index;
+                                class python:'active' if repeat['hero'].start else ''"
+                data-target="#good_cause" data-slide-to="1"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div tal:repeat="hero context/heros"
+                 tal:attributes="class python:'item active' if repeat['hero'].start else 'item'">
+                <img tal:attributes="src string:${hero/to_object/absolute_url}/@@images/image; alt hero/to_object/title">
+            </div>
+        </div>
+    </section>
+   
+	<section class="row upcoming_recent_events style2">
+		<div class="container">
+
+			<div class="row sectionTitle text-center">
+				<h6 class="label label-default">本會最新訊息</h6>
+				<h3>本會最新消息 & 最新活動</h3>
+			</div>
+
+			<div class="row">
+				<div tal:repeat="hotNews context/hotNews"
+                                     tal:attributes="class python:'col-sm-12 col-md-6 upcoming_events' if repeat['hotNews'].start else 'col-sm-6 col-md-3 upcoming_events'">
+					<div class="row event_cover_photo">
+                                          <a tal:attributes="href hotNews/to_object/absolute_url">
+						<img tal:attributes="src string:${hotNews/to_object/absolute_url}/@@images/image/large;
+                                                                     alt hotNews/to_object/image_caption"
+                                                     class="img-responsive">
+                                          </a>
+						<h6 class="event_time_loc">
+							<span class="by" tal:content="hotNews/to_object/image_caption">JOHN DOE</span>
+						</h6>
+					</div>
+					<h4 class="event_title">
+                                          <a tal:attributes="href hotNews/to_object/absolute_url" tal:content="hotNews/to_object/title">EVENT FOR HOW TO BECOME GOOD VOLUNTEER
+                                          </a>
+                                        </h4>
+					<p class="event_summery" tal:content="hotNews/to_object/description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam malesuada dapibus diam, ut fringilla purus efficitur eget. Morbi sagittis mi ac eros semper pharetra. Praesent sed purus purus.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+</metal:content-core>
+</metal:content-core>
+
+</body>
+</html>
+

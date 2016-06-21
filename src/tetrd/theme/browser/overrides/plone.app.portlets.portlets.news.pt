@@ -1,0 +1,59 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      tal:omit-tag="">
+<section class="portlet portletNews"  role="section"
+    i18n:domain="plone">
+
+                    <div class="row m0 widget widget-news">
+<h4 class="widget-title">
+        <a href="#"
+           class="tile"
+           tal:define="all_news_link view/all_news_link"
+           tal:omit-tag="not:all_news_link"
+           tal:attributes="href all_news_link"
+           i18n:translate="box_news">News</a>
+</h4>
+
+      <tal:newsitems  tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime;
+                                  plone_layout context/@@plone_layout"
+                      tal:repeat="obj view/published_news_items">
+
+
+
+       <div class="media recent-post">
+         <div class="media-left">
+           <a tal:attributes="href obj/getURL; title obj/Description">
+             <img tal:define="getIcon python:obj.getURL()+'/@@images/image/thumb'"
+                  tal:condition="python:  obj.getIcon"
+                  tal:attributes="href obj/getURL;
+                                  src string:$getIcon;
+                                  alt obj/Title">
+           </a>
+         </div>
+         <div class="media-body">
+           <h5 class="title">
+             <a href="#" tal:attributes="href obj/getURL;
+                                         title obj/pretty_title_or_id;
+                                         alt obj/pretty_title_or_id"
+                         tal:content="obj/pretty_title_or_id">EVENT FOR PROVIDING PENS TO THE CHILDRENS monthly base</a>
+           </h5>
+           <h5 class="date"><i class="fa fa-calendar-o"></i><a href="#" tal:content="python:toLocalizedTime(obj.Date)">June 29, 2015</a></h5>
+         </div>
+       </div>
+
+
+      </tal:newsitems>
+
+  <footer class="portletFooter"
+         tal:condition="view/all_news_link">
+        <a href=""
+           tal:attributes="href view/all_news_link"
+           i18n:translate="box_more_news_link">
+          More news&hellip;
+        </a>
+  </footer>
+  <footer class="portletFooter" tal:condition="not:view/all_news_link">
+  </footer>
+</section>
+</html>
