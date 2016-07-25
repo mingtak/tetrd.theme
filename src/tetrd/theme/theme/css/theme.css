@@ -700,14 +700,17 @@ body p {
   background: none;
 }
 .navbar3 #mainNav .navbar-nav li a {
-  color: #fff;
+/*  color: #fff; */
+color: #888;
 }
 .navbar3 #mainNav .navbar-nav li a:hover, .navbar3 #mainNav .navbar-nav li a:focus {
-  color: #435061;
+/*  color: #435061; */
+color: orange;
 }
 .navbar3 #mainNav .navbar-nav li.active > a {
   color: #435061;
-  background: #fff;
+/*  background: #fff; */
+background: #0ff;
 }
 .navbar3 #mainNav .navbar-nav li .dropdown-menu li a {
   color: #435061;

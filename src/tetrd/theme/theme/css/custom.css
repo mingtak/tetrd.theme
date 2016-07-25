@@ -20,3 +20,6 @@
     box-shadow:inherit
 }
 
+#edit-zone {
+    z-index:10000;
+}
